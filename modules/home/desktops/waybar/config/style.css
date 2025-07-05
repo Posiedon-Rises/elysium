@@ -1,0 +1,153 @@
+/*
+*                          __                   _     __    __            _                
+*   /\  /\_   _ _ __  _ __/ _\_      _____  ___| |_  / / /\ \ \__ _ _   _| |__   __ _ _ __ 
+*  / /_/ / | | | '_ \| '__\ \\ \ /\ / / _ \/ _ \ __| \ \/  \/ / _` | | | | '_ \ / _` | '__|
+* / __  /| |_| | |_) | |  _\ \\ V  V /  __/  __/ |_   \  /\  / (_| | |_| | |_) | (_| | |   
+* \/ /_/  \__, | .__/|_|  \__/ \_/\_/ \___|\___|\__|   \/  \/ \__,_|\__, |_.__/ \__,_|_|   
+*         |___/|_|                                                  |___/                  
+* 
+* -------------------------------------------------
+* Made by Coolio
+*/
+
+@import url("/home/Coolio/.config/colors/Vauxhall/Vauxhall.gtk.css");
+
+@define-color background-trans alpha(@background, 0.6);
+* {
+	font-family: JetBrainsMono NF;
+}
+
+
+#window {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    color:@text;
+    font-size:16px;
+    font-weight:normal;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#workspaces {
+	background-color: transparent;
+    margin: 3px;
+    padding: 0px 3px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+	color: @text;
+    margin: 4px 3px;
+    padding: 0px 3px 0px 0px;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @text;
+    background: @background-trans;
+    border-radius: 15px;
+    margin: 4px 3px;
+    min-width: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+#clock 
+{
+	background-color: @background-trans;
+	color: @text;
+	margin: 8px 8px 8px 2px;
+	font-size: 16px;
+	padding: 0px 10px;
+	font-size: 16px;
+	border-radius: 10px;
+}
+
+#bluetooth,
+#battery,
+#pulseaudio
+{
+	background-color: @background-trans;
+	color: @text;
+	margin: 8px 2px;
+	font-size: 16px;
+	padding: 0px 13px 0px 10px;
+	font-size: 16px;
+	border-radius: 10px;
+
+}
+
+#cpu,
+#memory,
+#disk
+{
+    color: @text;
+	margin: 8px 2px 8px 8px;
+	padding: 0px 10px;
+	background-color: @background-trans;
+	font-size: 16px;
+	border-radius: 10px;
+}
+
+#memory,
+#disk
+{
+	margin: 8px 2px 8px 2px;
+}
+
+
+
+#cpu.idle,
+#memory.idle,
+#disk.empty
+{
+	color: @mint;
+}
+
+#cpu.low,
+#memory.low, 
+#disk.low
+{
+    color: @cyan;
+}
+
+#cpu.medium,
+#memory.medium,
+#disk.medium
+{
+    color: @blue;
+}
+
+
+#cpu.high,
+#memory.high,
+#disk.high
+{
+    color: @violet;
+}
+
+#battery.warning,
+#cpu.warning,
+#memory.warning,
+#disk.warning
+{
+	color: @magenta;
+}
+
+#battery.critical,
+#cpu.critical,
+#memory.critical,
+#disk.critical
+{
+    color: @hot-red;
+}
+

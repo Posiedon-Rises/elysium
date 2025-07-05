@@ -1,0 +1,104 @@
+{
+  "logo": {
+    "height": 15,
+    "padding": {
+      "left": 5,
+      "top": 1
+    },
+    "type": "kitty",
+    "width": 30
+  },
+  "modules": [
+    "break",
+    {
+      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐",
+      "type": "custom"
+    },
+    {
+      "key": " PC",
+      "keyColor": "cyan",
+      "type": "host"
+    },
+    {
+      "key": "│ ├",
+      "keyColor": "cyan",
+      "type": "disk"
+    },
+    {
+      "key": "│ ├",
+      "keyColor": "cyan",
+      "showPeCoreCount": true,
+      "type": "cpu"
+    },
+    {
+      "key": "│ ├󰍛",
+      "keyColor": "cyan",
+      "type": "gpu"
+    },
+    {
+      "key": "└ └󰍛",
+      "keyColor": "cyan",
+      "type": "memory"
+    },
+    {
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘",
+      "type": "custom"
+    },
+    "break",
+    {
+      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐",
+      "type": "custom"
+    },
+    {
+      "format": "{pretty-name} {arch}",
+      "key": " OS",
+      "keyColor": "blue",
+      "type": "os"
+    },
+    {
+      "key": "│ ├",
+      "keyColor": "blue",
+      "type": "kernel"
+    },
+    {
+      "key": "│ ├",
+      "keyColor": "blue",
+      "type": "wm"
+    },
+    {
+      "key": "│ ├󰏖",
+      "keyColor": "blue",
+      "type": "packages"
+    },
+    {
+      "key": "└ └",
+      "keyColor": "blue",
+      "type": "shell"
+    },
+    {
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘",
+      "type": "custom"
+    },
+    "break",
+    {
+      "format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐",
+      "type": "custom"
+    },
+    {
+      "key": "  OS Age ",
+      "keyColor": "magenta",
+      "text": "birth_install=$(stat -c %W /);\ncurrent=$(date +%s);\ntime_progression=$((current - birth_install));\ndays_difference=$((time_progression / 86400));\necho $days_difference days\n",
+      "type": "command"
+    },
+    {
+      "key": "  Uptime ",
+      "keyColor": "magenta",
+      "type": "uptime"
+    },
+    {
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘",
+      "type": "custom"
+    },
+    "break"
+  ]
+}

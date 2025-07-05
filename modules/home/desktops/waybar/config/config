@@ -1,0 +1,134 @@
+//                          __                   _     __    __            _                
+//   /\  /\_   _ _ __  _ __/ _\_      _____  ___| |_  / / /\ \ \__ _ _   _| |__   __ _ _ __ 
+//  / /_/ / | | | '_ \| '__\ \\ \ /\ / / _ \/ _ \ __| \ \/  \/ / _` | | | | '_ \ / _` | '__|
+// / __  /| |_| | |_) | |  _\ \\ V  V /  __/  __/ |_   \  /\  / (_| | |_| | |_) | (_| | |   
+// \/ /_/  \__, | .__/|_|  \__/ \_/\_/ \___|\___|\__|   \/  \/ \__,_|\__, |_.__/ \__,_|_|   
+//         |___/|_|                                                  |___/                  
+// 
+// -------------------------------------------------
+// Made by Coolio
+
+{
+    "layer": "top",
+    "height": 48,
+    "spacing": 4,
+    "reload_style_on_change": true,
+    "modules-left": [
+    	"cpu",
+    	"memory",
+    	"disk"
+    ],
+       
+    "modules-center": [
+    	"hyprland/workspaces"
+    ],
+    
+    "modules-right": [
+    	"pulseaudio",
+    	"bluetooth",
+    	"battery",
+    	"clock",
+    	"tray"
+    ],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "order": [ "shell", "browser", "code", "godot-editor"],
+        "format": "{icon}",
+        "format-icons": {
+        	 "1": "  ",
+        	 "2": " 󰖟 ",
+        	 "3": "  ",
+        	 "4": "  ",
+        	 "5": " 󰮂 ",
+        	 "6": " 󰽉 ",
+        	 "7": "  ",
+        	 "8": " 󰉓 "
+        }
+    },
+
+    "pulseaudio": {
+    	"format": "{volume}% {icon}",
+    	"format-muted": "{volume}% ",
+    	"format-icons": {
+    		"headphones": "",
+   			"handsfree": "󱠰",
+   			"headset": "",
+   			"phone": "",
+   			"phone-muted": "",
+   			"portable": "",
+   			"car": "",
+    		"default": [ "", ""]
+    	},
+    	"on-click": "pavucontrol",
+    	"on-click-middle": "pamixer --toggle-mute",
+    	"on-scroll-up": "pamixer --decrease 5",
+    	"on-scroll-down": "pamixer --increase 5"
+    },
+
+    "battery": {
+    	"bat": "BAT0",
+    	"interval": 60,
+    	"format": "{capacity}% {icon} ",
+    	"format-charging": "{capacity}% 󰂄",
+    	"format-plugged": "{capacity}% ",
+    	"format-icons": ["", "", "", "", ""],
+    	"max-length": 25
+    },
+
+   	"tray": {
+   	    "spacing": 10
+   	},
+
+   	"bluetooth": {
+		"format": "{device_battery_percentage}% ",
+		"format-device-preference": [ "Headphones", "Lic2 Pro Controller" ],
+		"format-disabled": "", // an empty format will hide the module
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click": "blueman-manager"
+   	},
+
+   	"cpu": {
+	   	"states": {
+	   		"idle": 0,
+	   		"low": 10,
+	   		"medium":30,
+	   		"high": 50,
+	   		"warning": 70,
+	   		"critical": 90
+	   	},
+   		"interval": 10,
+   		"format": " {usage}%"
+   	},
+
+   	"memory": {
+	   	"states": {
+	   		"idle": 0,
+	   		"low": 10,
+	   		"medium":30,
+	   		"high": 50,
+	   		"warning": 70,
+	   		"critical": 90
+	   	},
+   		"interval": 10,
+   		"format": " {percentage}%"
+   	},
+
+   	"disk": {
+   		"states": {
+	   		"empty": 0,
+	   		"low": 10,
+	   		"medium":30,
+	   		"high": 50,
+	   		"warning": 70,
+	   		"critical": 90
+   		},
+   		"intervel": 300,
+   		"format": " {percentage_used}%"
+   	}
+   
+}
