@@ -9,7 +9,7 @@
       internet.enable = true;
       office.enable = true;
       utilities.enable = true;
-    }
+    };
   };
 }
 

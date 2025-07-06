@@ -38,7 +38,7 @@
     isWork = lib.mkOption {
       type = lib.types.bool;
       default = config.hostSpec.isDesktop;
-    }
+    };
 
     isMinimal = lib.mkOption {
       type = lib.types.bool;

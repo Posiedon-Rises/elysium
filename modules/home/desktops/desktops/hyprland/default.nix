@@ -230,9 +230,6 @@ in
 
           "SUPER, N, togglespecialworkspace, notebook"
           "SHIFT + SUPER, N, movetoworkspace, special:notebook"
-
-          "SUPER, ESCAPE, exit"
-          "SHIFT + SUPER, ESCAPE, exec, poweroff"
         ];
 
         binde = [
@@ -281,6 +278,13 @@ in
           # Change brightness with brightness keys
           ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
           ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+
+          # Exit Hyprland
+          "SUPER, ESCAPE, exit"
+
+          # Power options
+          "SHIFT + SUPER, ESCAPE, exec, poweroff"
+          "ALT + SUPER, ESCAPE, exec, reboot"
         ];
 
         bindl = [
