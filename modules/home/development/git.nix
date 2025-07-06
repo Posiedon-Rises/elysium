@@ -10,6 +10,7 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.git = {
+      enable = true;
       aliases = {
         co = "checkout";
         undo = "reset --hard HEAD~1";

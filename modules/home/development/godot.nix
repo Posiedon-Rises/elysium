@@ -23,6 +23,6 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = [
       pkgs.godot_4-mono
-    ] ++ lib.optional cfg.exportTemplates pkgs.godot_4-export-templates;
+    ] ++ lib.optional cfg.exportTemplates pkgs.godot_4-export-templates-bin;
   };
 }

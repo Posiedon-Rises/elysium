@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
 {
   options.hostSpec = {
@@ -34,6 +34,11 @@
       type = lib.types.bool;
       default = false;
     };
+
+    isWork = lib.mkOption {
+      type = lib.types.bool;
+      default = config.hostSpec.isDesktop;
+    }
 
     isMinimal = lib.mkOption {
       type = lib.types.bool;

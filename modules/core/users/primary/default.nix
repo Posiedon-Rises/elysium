@@ -17,7 +17,7 @@ in
 
   home-manager = {
     extraSpecialArgs = {
-      inherit pkgs master inputs vauxhall;
+      inherit config pkgs master inputs vauxhall;
       hostSpec = config.hostSpec;
     };
     users.${hostSpec.username}.imports = lib.flatten (
