@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 
@@ -20,8 +19,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/.dotfiles/wallpapers/blacklotus-nix.png" ];
-        wallpaper = [ ",~/.dotfiles/wallpapers/blacklotus-nix.png" ];
+        preload = [ "~/.elysium/wallpapers/blacklotus-nix.png" ];
+        wallpaper = [ ",~/.elysium/wallpapers/blacklotus-nix.png" ];
       };
     };
   };

@@ -34,7 +34,7 @@ in
           {
             monitor = "";
             #path = screenshot
-            path = "~/.dotfiles/wallpapers/stars.jpg";
+            path = "~/.elysium/wallpapers/stars.jpg";
             #color = $background
             blur_size = 5;
             blur_passes = 2;
