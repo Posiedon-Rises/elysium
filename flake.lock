@@ -73,6 +73,7 @@
       },
       "original": {
         "id": "home-manager",
+        "ref": "master",
         "type": "indirect"
       }
     },
@@ -150,6 +151,7 @@
       },
       "original": {
         "id": "sops-nix",
+        "ref": "master",
         "type": "indirect"
       }
     },

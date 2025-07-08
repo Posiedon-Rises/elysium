@@ -61,12 +61,12 @@
     };
 
     home-manager = {
-      url = "home-manager";
+      url = "home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sops-nix = {
-      url = "sops-nix";
+      url = "sops-nix/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
