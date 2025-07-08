@@ -40,7 +40,7 @@ in
 
         # Tabs
         tab_bar_edge = "top";
-        tab_bar_style = "fade";
+        tab_bar_style = "powerline";
         tab_powerline_style = "slanted";
         tab_title_max_length = 50;
 
@@ -55,7 +55,6 @@ in
         foreground = vauxhall.text.hex;
         background = vauxhall.background.hex;
         selection_background = vauxhall.text.hex;
-        background_opacity = 0.65;
 
         # The basic 16 colors
         # black

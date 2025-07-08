@@ -61,12 +61,12 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sops-nix = {
-      url = "github:/Mic92/sops-nix";
+      url = "sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
