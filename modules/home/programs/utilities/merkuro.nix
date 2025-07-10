@@ -10,7 +10,7 @@ let
   cfg = cfg'.merkuro;
 in
 {
-  options.elysium.programs.utilities.kcalc.enable = lib.mkEnableOption "Merkuro" // {
+  options.elysium.programs.utilities.merkuro.enable = lib.mkEnableOption "Merkuro" // {
     default = cfg'.enable;
   };
 

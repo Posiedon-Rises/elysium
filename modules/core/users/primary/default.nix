@@ -17,12 +17,13 @@ in
 
   home-manager = {
     extraSpecialArgs = {
-      inherit config pkgs master inputs vauxhall;
+      inherit master inputs vauxhall;
+      hostSpec = config.hostSpec;
     };
 
     users.${hostSpec.username}.imports = lib.optional (!hostSpec.isMinimal) [
       (lib.elysium.relativeToRoot "home/${hostSpec.username}/${hostSpec.hostName}.nix")
       (lib.elysium.relativeToRoot "modules/home")
-    ];
+    ] |> lib.flatten;
   };
 }

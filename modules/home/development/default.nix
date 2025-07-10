@@ -1,9 +1,9 @@
-{ config, lib, ... }:
+{ hostSpec, lib, ... }:
 
 {
   imports = lib.elysium.scanPaths ./.;
 
   options.elysium.development.enable = lib.mkEnableOption "Development programs" // {
-    default = config.hostSpec.isWork;
+    default = hostSpec.isWork;
   };
 }

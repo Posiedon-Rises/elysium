@@ -1,6 +1,6 @@
 { config, lib, ... }:
 
-{
+rec {
   options.hostSpec = {
     username = lib.mkOption {
       type = lib.types.str;

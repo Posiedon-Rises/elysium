@@ -14,11 +14,11 @@
         };
       };
 
-      # config = lib.setAttrByPath (
-      #   path ++ [ 
-      #    (lib.last path)
-      #    (lib.getAttrFromPath path config).${selectionOption.name}
-      #   ] 
-      # ) { enable = lib.mkDefault true; };
+      config = lib.setAttrByPath (
+        path ++ [ 
+         (lib.last path)
+         (lib.getAttrFromPath path config).${selectionOption.name}
+        ] 
+      ) { enable = lib.mkDefault true; };
     };
 }

@@ -1,6 +1,7 @@
 { config, lib, ... }:
 
 let
+  hmCfg = config.hm.elysium.shells.shells.zsh;
   cfg = config.elysium.shells;
 in
 {
@@ -15,7 +16,7 @@ in
 
   options.elysium.shells.shells = {
     zsh.enable = lib.mkEnableOption "Zsh" // {
-      default = lib.elysium.anyUserHasOption "elysium.shells.zsh.enable";
+      default = hmCfg.enable;
     };
   };
 

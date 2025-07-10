@@ -15,6 +15,6 @@ in
   };
 
   config = lib.mkIf (cfg'.enable && cfg.enable) {
-    home.packages = [ pkgs.okular ];
+    home.packages = [ pkgs.kdePackages.okular ];
   };
 }
