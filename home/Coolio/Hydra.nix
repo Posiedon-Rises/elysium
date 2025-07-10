@@ -1,6 +1,8 @@
-{ ... }:
+{ lib, ... }:
 
 {
+  imports = [ (lib.elysium.relativeToRoot "modules/home") ];
+  
   elysium = {
   	development.enable = true;
 

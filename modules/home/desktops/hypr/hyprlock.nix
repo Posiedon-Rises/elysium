@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  hostSpec,
   vauxhall,
   ...
 }:
@@ -59,7 +58,7 @@ in
             font_color = "rgb(${vauxhall.cyan.alpha})";
             fade_on_empty = false;
             rounding = -1;
-            placeholder_text = "<span foreground='#${vauxhall.blue.hex}'><i>Logged in as</i><span foreground='#${vauxhall.violet.hex}'> <b>${hostSpec.username}</b></span></span>";
+            placeholder_text = "<span foreground='#${vauxhall.blue.hex}'><i>Logged in as</i><span foreground='#${vauxhall.violet.hex}'> <b>$USER</b></span></span>";
             loading_color = "rgb(${vauxhall.mint.alpha})";
             fail_color = "rgb(${vauxhall.yellow.alpha})";
             fail_text = "<i>$FAIL <b>$ATTEMPTS</b></i>";

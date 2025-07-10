@@ -1,6 +1,5 @@
 {
   config,
-  hostSpec,
   lib,
   ...
 }:
@@ -19,7 +18,7 @@ in
 
   options.elysium.desktops = {
     enable = lib.mkEnableOption "desktops" // {
-      default = hostSpec.isDesktop;
+      default = config.hostSpec.isDesktop;
     };
 
     exec-once = lib.mkOption {

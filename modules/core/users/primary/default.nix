@@ -1,7 +1,7 @@
 { inputs, pkgs, master, config, lib, ... }:
 let
   hostSpec = config.hostSpec;
-  vauxhall = import (lib.elysium.relativeToRoot "vauxhall.nix"); 
+  vauxhall = import (lib.elysium.relativeToRoot "vauxhall.nix");
 in
 {
   users.users.${hostSpec.username} = {
@@ -10,7 +10,7 @@ in
     group = hostSpec.username;
     uid = 1000;
     extraGroups = [ "wheel" ];
-    shell = pkgs.zsh; # default shell
+    shell = pkgs.zsh;
   };
 
   users.groups.${hostSpec.username} = { gid = 1000; };
@@ -18,40 +18,11 @@ in
   home-manager = {
     extraSpecialArgs = {
       inherit config pkgs master inputs vauxhall;
-      hostSpec = config.hostSpec;
     };
-    users.${hostSpec.username}.imports = lib.flatten (
-      lib.optional (!hostSpec.isMinimal) [
-        (
-          { config, ... }:
-          import (lib.elysium.relativeToRoot "home/${hostSpec.username}/${hostSpec.hostName}.nix") {
-            inherit
-              pkgs
-              master
-              inputs
-              config
-              lib
-              hostSpec
-              vauxhall
-              ;
-          }
-        )
 
-        (
-          { config, ... }:
-          import (lib.elysium.relativeToRoot "modules/home") {
-            inherit
-              pkgs
-              master
-              inputs
-              config
-              lib
-              hostSpec
-              vauxhall
-              ;
-          }
-        )
-      ]
-    );
+    users.${hostSpec.username}.imports = lib.optional (!hostSpec.isMinimal) [
+      (lib.elysium.relativeToRoot "home/${hostSpec.username}/${hostSpec.hostName}.nix")
+      (lib.elysium.relativeToRoot "modules/home")
+    ];
   };
 }
