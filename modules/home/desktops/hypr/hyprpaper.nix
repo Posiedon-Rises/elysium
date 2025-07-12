@@ -19,8 +19,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/.elysium/wallpapers/blacklotus-nix.png" ];
-        wallpaper = [ ",~/.elysium/wallpapers/blacklotus-nix.png" ];
+        preload = [ "~/.elysium/wallpapers/stars-nix.png" ];
+        wallpaper = [ ",~/.elysium/wallpapers/stars-nix.png" ];
       };
     };
   };
