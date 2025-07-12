@@ -13,8 +13,8 @@ in
     programs.television.channels.nix.nix = [
       {
         name = "nix";
-        source_command = "nix-search-tv --source";
-        preview = "nix-search-tv --preview {}";
+        source_command = "nix-search-tv print";
+        preview = "nix-search-tv preview {}";
       }
     ]
 

@@ -23,6 +23,7 @@ in
       swaync.enable = true;
       waybar.enable = true;
       activate-linux.enable = true;
+      kando.enable = true;
     };
     wayland.windowManager.hyprland = {
       enable = true;
@@ -32,8 +33,6 @@ in
         "$fileManager" = "dolphin";
         "$browser" = "MOZ_ENABLE_WAYLAND=0 ${config.elysium.browsers.default}";
         "$menu" = "rofi -show drun";
-
-        exec-once = cfg'.exec-once;
 
         input = {
           kb_layout = "us";
@@ -167,6 +166,7 @@ in
           "ALT + SHIFT + SUPER, C, exec, hyprpicker --fmt=rgb --autocopy"
           "SHIFT + SUPER, L, exec, hyprlock"
           "SUPER, V, exec, cliphist list | rofi -dmenu -p  -display-columns 2 | cliphist decode | wl-copy"
+          "SUPER, Space, global, kando:main-menu"
 
           ", PRINT, exec, hyprshot -m output -o ~/Media/Images"
           "SUPER, PRINT, exec, hyprshot -m window -o ~/Media/Images"
@@ -293,6 +293,16 @@ in
           ", XF86AudioNext, exec, playerctl next"
           ", XF86AudioPause, exec, playerctl play-pause"
           ", XF86AudioPlay, exec, playerctl play-pause"
+        ];
+
+        windowrule = [
+          "noblur, class:kando"
+          "opaque, class:kando"
+          "size 100% 100%, class:kando"
+          "noborder, class:kando"
+          "noanim, class:kando"
+          "float, class:kando"
+          "pin, class:kando"
         ];
 
         windowrulev2 = [

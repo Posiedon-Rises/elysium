@@ -1,7 +1,7 @@
 { config, lib, ... }:
 
 let
-  hmCfg = config.hm.elysium.desktops;
+  hmCfg = config.hm.elysium.desktops.desktops.hyprland;
   cfg' = config.elysium.desktops;
   cfg = cfg'.desktops.hyprland;
 in

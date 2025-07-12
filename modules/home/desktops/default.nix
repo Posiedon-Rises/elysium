@@ -25,13 +25,35 @@ in
     exec-once = lib.mkOption {
       default = [ ];
       example = [ "hyprpaper" ];
-      description = "Commands to run once the desktop has been started";
+      description = ''
+        Commands to run automatically at session startup. May be ran before 
+        the desktop is fully started.
+      '';
       type = lib.types.listOf lib.types.string;
     };
   };
 
   config = lib.mkIf cfg.enable {
     xdg.portal.xdgOpenUsePortal = true;
-  };
 
+    systemd.user.services = cfg.exec-once |>
+      (map (x: {
+        name = "${x |> lib.splitString " " |> builtins.head}-exec-once";
+        value = {
+          Unit = {
+            Description = "Autorun `${x}`. Created by elysium.desktops.exec-once";
+            After = [ "graphical-session.target" ];
+            PartOf = [ "graphical-session.target" ];
+          };
+          Service = {
+            ExecStart = x;
+            Restart = "on-failure";
+          };
+          Install = {
+            WantedBy = [ "graphical-session.target" ];
+          };
+        };
+      })) |>
+      lib.listToAttrs;
+  };
 }

@@ -17,27 +17,6 @@
       };
     };
   };
-  xdg = {
-    enable = true;
-    userDirs = {
-      enable = true;
-      pictures = "${config.home.homeDirectory}/Media/Images";
-      music = "${config.home.homeDirectory}/Media/Music";
-      videos = "${config.home.homeDirectory}/Media/Music";
-    };
-
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "default-web-browser" = [ "zen.desktop" ];
-        "text/html" = [ "zen.desktop" ];
-        "x-scheme-handler/http" = [ "zen.desktop" ];
-        "x-scheme-handler/https" = [ "zen.desktop" ];
-        "x-scheme-handler/about" = [ "zen.desktop" ];
-        "x-scheme-handler/unknown" = [ "zen.desktop" ];
-      };
-    };
-  };
 
   home.sessionVariables = {
     GTK_USE_PORTAL = 1;
