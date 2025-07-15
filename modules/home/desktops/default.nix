@@ -35,25 +35,5 @@ in
 
   config = lib.mkIf cfg.enable {
     xdg.portal.xdgOpenUsePortal = true;
-
-    systemd.user.services = cfg.exec-once |>
-      (map (x: {
-        name = "${x |> lib.splitString " " |> builtins.head}-exec-once";
-        value = {
-          Unit = {
-            Description = "Autorun `${x}`. Created by elysium.desktops.exec-once";
-            After = [ "graphical-session.target" ];
-            PartOf = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStart = x;
-            Restart = "on-failure";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-        };
-      })) |>
-      lib.listToAttrs;
   };
 }

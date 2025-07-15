@@ -34,6 +34,8 @@ in
         "$browser" = "MOZ_ENABLE_WAYLAND=0 ${config.elysium.browsers.default}";
         "$menu" = "rofi -show drun";
 
+        exec-once = cfg'.exec-once;
+
         input = {
           kb_layout = "us";
           kb_variant = "";
