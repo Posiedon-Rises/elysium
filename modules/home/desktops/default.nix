@@ -29,7 +29,7 @@ in
         Commands to run automatically at session startup. May be ran before 
         the desktop is fully started.
       '';
-      type = lib.types.listOf lib.types.string;
+      type = lib.types.listOf lib.types.str;
     };
   };
 

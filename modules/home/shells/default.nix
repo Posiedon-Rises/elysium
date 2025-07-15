@@ -36,7 +36,7 @@ in
     };
 
     shellAliases = lib.mkOption {
-      type = lib.types.attrsOf lib.types.string;
+      type = lib.types.attrsOf lib.types.str;
       default = { };
       example = { ll = "ls -l"; };
     };
