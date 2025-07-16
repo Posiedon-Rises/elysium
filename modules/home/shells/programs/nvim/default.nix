@@ -48,6 +48,8 @@ in
 
       autocomplete.blink-cmp.enable = true;
 
+      git.neogit.enable = true;
+      
       lsp = {
         enable = true;
         formatOnSave = true;
