@@ -37,6 +37,11 @@ in
           right = "";
         };
       };
+      
+      utility.outline.aerial-nvim = {
+        enable = true;
+        mappings.toggle = "<leader>a";
+      };
 
       visuals = {
         indent-blankline.enable = true;
