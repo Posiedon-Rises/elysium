@@ -102,13 +102,13 @@ in
           }
 
           {
-            name = "projects";
+            name = "project";
             packages = [ pkgs.vimPlugins.telescope-project-nvim ];
             setup = { };
           }
 
           {
-            name = "browser";
+            name = "file_browser";
             packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
             setup = { };
           }
