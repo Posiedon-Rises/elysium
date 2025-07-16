@@ -1,8 +1,5 @@
-{ config, lib, ... }:
+{ config, ... }:
 
-let
-  hmCfg = config.hm.elysium.programs.internet.kdeconnect;
-in
 {
   networking.firewall = {
     allowedUDPPortRanges = [

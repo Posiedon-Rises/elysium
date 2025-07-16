@@ -10,7 +10,9 @@ let
   cfg = cfg'.kitty;
 in
 {
-  options.elysium.terminals.kitty.enable = lib.mkEnableOption "Kitty" // { default = true; };
+  options.elysium.terminals.kitty.enable = lib.mkEnableOption "Kitty" // {
+    default = true;
+  };
 
   config = lib.mkIf (cfg'.enable && cfg.enable) {
     programs.kitty = {
@@ -82,8 +84,8 @@ in
         color13 = vauxhall.magenta.hex;
 
         # cyan
-        color6 = vauxhall.cyanBlue.hex;
-        color14 = vauxhall.cyan.hex;
+        color6 = vauxhall.cyan.hex;
+        color14 = vauxhall.coolCyan.hex;
 
         # white
         color7 = vauxhall.text.hex;

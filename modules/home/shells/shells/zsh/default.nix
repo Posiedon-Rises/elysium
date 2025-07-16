@@ -11,7 +11,9 @@ let
 in
 {
   options.elysium.shells.shells.zsh = {
-    enable = lib.mkEnableOption "Zsh" // { default = true; };
+    enable = lib.mkEnableOption "Zsh" // {
+      default = true;
+    };
     package = lib.elysium.mkStaticPackageOption (lib.elysium.getCfgPkg config.programs.zsh);
   };
 

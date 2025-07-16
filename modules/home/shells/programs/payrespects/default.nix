@@ -12,7 +12,10 @@ in
   config = lib.mkIf cfg.enable {
     programs.pay-respects = {
       enable = true;
-      options = [ "--alias" "fuck" ];
+      options = [
+        "--alias"
+        "fuck"
+      ];
     };
   };
 }

@@ -1,48 +1,56 @@
 {
   description = "Elysium";
 
-  outputs = { 
-    self,
-    nixpkgs,
-    ...
-  }@inputs:
-  let 
-    inherit (self) outputs;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
 
-    forAllSystems = nixpkgs.lib.genAttrs [
-      "x86_64-linux"
-      #"aarch64-linux"
-    ];
+      forAllSystems = nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        #"aarch64-linux"
+      ];
 
-    lib = nixpkgs.lib.extend (self: super: { elysium = import ./lib { inherit (nixpkgs) lib; }; });
+      lib = nixpkgs.lib.extend (self: super: { elysium = import ./lib { inherit (nixpkgs) lib; }; });
 
-    vauxhall = import ./vauxhall.nix;
-  in
-  {
-    nixosConfigurations =
-      ./hosts/nixos
-      |> builtins.readDir
-      |> builtins.attrNames
-      |> map (host: {
+      vauxhall = import ./vauxhall.nix;
+    in
+    {
+      nixosConfigurations =
+        ./hosts/nixos
+        |> builtins.readDir
+        |> builtins.attrNames
+        |> map (host: {
           name = host;
           value = nixpkgs.lib.nixosSystem {
             specialArgs = {
-              inherit inputs outputs lib vauxhall;
+              inherit
+                inputs
+                outputs
+                lib
+                vauxhall
+                ;
             };
-            modules = [ 
-              ./hosts/nixos/${host} 
+            modules = [
+              ./hosts/nixos/${host}
               ./modules/core
               ./modules/host-spec.nix
             ];
           };
         })
-      |> builtins.listToAttrs;
+        |> builtins.listToAttrs;
 
-    formatter = forAllSystems (system: system
-      |> (s: import nixpkgs { inherit system; })
-      |> (pkgs: inputs.treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix)
-    );
-  };
+      formatter = forAllSystems (
+        system:
+        system
+        |> (s: import nixpkgs { inherit system; })
+        |> (pkgs: inputs.treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix)
+      );
+    };
 
   inputs = {
 

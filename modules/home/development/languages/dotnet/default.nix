@@ -11,7 +11,7 @@ let
 in
 {
   imports = lib.elysium.scanPaths ./.;
-  
+
   options.elysium.development.languages.dotnet.enable = lib.mkEnableOption "Dotnet";
 
   config = lib.mkIf cfg.enable {

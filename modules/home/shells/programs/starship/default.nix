@@ -3,8 +3,6 @@
   ...
 }:
 
-let
-in
 {
   programs.starship = {
     enable = true;
@@ -12,7 +10,8 @@ in
       add_newline = false;
 
       format = lib.strings.concatStringsSep "" [
-        "[](fg:green)"
+        "[╭](fg:bright-black)"
+        "[](fg:green)"
         "$username$hostname"
         "[](fg:green bg:cyan)"
         "$directory"
@@ -21,8 +20,9 @@ in
         "$rust"
         "[](fg:blue bg:purple)"
         "$git_branch"
-        "[](fg:purple)"
+        "[](fg:purple)"
         "$line_break"
+        "[╰](fg:bright-black)"
         "$character"
       ];
 
@@ -59,7 +59,7 @@ in
       };
 
       character = {
-        success_symbol = "[➜](bold green)";
+        success_symbol = "[✔](bold green)";
         error_symbol = "[✗](bold red)";
       };
 

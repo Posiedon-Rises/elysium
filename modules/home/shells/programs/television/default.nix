@@ -9,6 +9,8 @@ let
   cfg = cfg'.tv;
 in
 {
+  imports = lib.elysium.scanPaths ./.;
+
   options.elysium.shells.programs.tv.enable = lib.mkEnableOption "television" // {
     default = cfg'.enableUseful || cfg'.enableFun;
   };

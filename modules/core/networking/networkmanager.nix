@@ -9,10 +9,9 @@ in
       default = true;
     };
 
-    waitOnline =
-      lib.mkEnableOption "Pause the boot process to wait for Internet to connet." // {
-        default = config.hostSpec.isServer;
-      };
+    waitOnline = lib.mkEnableOption "Pause the boot process to wait for Internet to connet." // {
+      default = config.hostSpec.isServer;
+    };
   };
 
   config = lib.mkIf cfg.enable {

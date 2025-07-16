@@ -1,4 +1,11 @@
-{ inputs, pkgs, master, config, lib, ... }:
+{
+  inputs,
+  pkgs,
+  master,
+  config,
+  lib,
+  ...
+}:
 let
   hostSpec = config.hostSpec;
   vauxhall = import (lib.elysium.relativeToRoot "vauxhall.nix");
@@ -13,7 +20,9 @@ in
     shell = pkgs.zsh;
   };
 
-  users.groups.${hostSpec.username} = { gid = 1000; };
+  users.groups.${hostSpec.username} = {
+    gid = 1000;
+  };
 
   home-manager = {
     extraSpecialArgs = {
@@ -21,9 +30,11 @@ in
       hostSpec = config.hostSpec;
     };
 
-    users.${hostSpec.username}.imports = lib.optional (!hostSpec.isMinimal) [
-      (lib.elysium.relativeToRoot "home/${hostSpec.username}/${hostSpec.hostName}.nix")
-      (lib.elysium.relativeToRoot "modules/home")
-    ] |> lib.flatten;
+    users.${hostSpec.username}.imports =
+      lib.optional (!hostSpec.isMinimal) [
+        (lib.elysium.relativeToRoot "home/${hostSpec.username}/${hostSpec.hostName}.nix")
+        (lib.elysium.relativeToRoot "modules/home")
+      ]
+      |> lib.flatten;
   };
 }

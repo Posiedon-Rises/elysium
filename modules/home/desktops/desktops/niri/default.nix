@@ -1,9 +1,5 @@
 { config, lib, ... }:
 
-let
-  cfg' = config.elysium.desktops;
-  cfg = cfg'.desktops.hyprland;
-in
 {
   options.elysium.desktops.desktops.niri = {
     enable = lib.mkEnableOption "Niri Window manager";

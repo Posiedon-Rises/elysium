@@ -16,6 +16,8 @@ in
     home.packages = [
       pkgs.nixd
       pkgs.manix
+      pkgs.statix
+      pkgs.deadnix
     ];
   };
 }

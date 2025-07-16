@@ -13,7 +13,8 @@ in
       name = "default";
       default = "zsh";
       description = "Default shell to use.";
-    })] ++ lib.elysium.scanPaths ./.;
+    })
+  ] ++ lib.elysium.scanPaths ./.;
 
   options.elysium.shells = {
     historySize = lib.mkOption {
@@ -38,7 +39,9 @@ in
     shellAliases = lib.mkOption {
       type = lib.types.attrsOf lib.types.str;
       default = { };
-      example = { ll = "ls -l"; };
+      example = {
+        ll = "ls -l";
+      };
     };
   };
 
