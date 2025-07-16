@@ -72,6 +72,8 @@ in
             "statix"
           ];
 
+          treesitter.enable = true;
+
           lsp = {
             server = "nixd";
 
