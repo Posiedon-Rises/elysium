@@ -38,6 +38,12 @@ in
         };
       };
 
+      visuals = {
+        indent-blankline.enable = true;
+      };
+
+      options.tabstop = 4;
+
       # Programming
 
       autocomplete.blink-cmp.enable = true;
@@ -47,6 +53,13 @@ in
         formatOnSave = true;
         inlayHints.enable = true;
       };
+
+      treesitter = {
+        enable = true;
+        textobjects.enable = true;
+      };
+      
+      projects.project-nvim.enable = true;
 
       languages = {
         nix = lib.mkIf langCfg.nix.enable {
@@ -84,6 +97,18 @@ in
                 fuzzy = true;
               };
             };
+          }
+
+          {
+            name = "projects";
+            packages = [ pkgs.vimPlugins.telescope-project-nvim ];
+            setup = { };
+          }
+
+          {
+            name = "browser";
+            packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
+            setup = { };
           }
         ];
       };
