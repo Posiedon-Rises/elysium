@@ -47,7 +47,10 @@ in
         indent-blankline.enable = true;
       };
 
-      options.tabstop = 4;
+      options = {
+        tabstop = 2;
+        shiftwidth = 2;
+      };
 
       # Programming
 
