@@ -124,6 +124,26 @@ in
           }
         ];
       };
+
+      # Keymaps
+
+      keymaps = [
+        {
+          key = "<leader>fb";
+          mode = "n";
+          action = "<cmd>:Telescope file_browser<CR>";
+        }
+        {
+          key = "<leader>fts";
+          mode = "n";
+          action = "<cmd>:Telescope treesitter<CR>";
+        }
+        {
+          key = "<leader>git";
+          mode = "n";
+          action = "<cmd>:Neogit<CR>";
+        }
+      ];
     };
   };
 }
