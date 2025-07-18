@@ -40,7 +40,6 @@ in
           kb_layout = "us";
           kb_variant = "";
           kb_model = "";
-          kb_options = "compose:ralt"; # allows typing letters with accent marks (ex é) by "composing" other symbols (ex e and ')
           kb_rules = "";
           follow_mouse = 1;
 
