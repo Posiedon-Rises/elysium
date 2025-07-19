@@ -95,7 +95,7 @@ in
                 formatting.command = "nix fmt";
 
                 nixos.expr = "(builtins.getFlake (\"git+file://\" + lib.elysium.relativeToRoot ./.)).nixosConfigurations.Hydra.options";
-                home-manager.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.Hydra.options.home-manager.users.type.getSubOptions []";
+                home-manager.expr = "(builtins.getFlake (\"git+file://\" + lib.elysium.relativeToRoot ./.)).nixosConfigurations.Hydra.options.home-manager.users.type.getSubOptions []";
               };
             };
           };
