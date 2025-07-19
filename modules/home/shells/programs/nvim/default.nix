@@ -21,6 +21,7 @@ in
 
     programs.neovim = {
       enable = true;
+      
     };
     
 
@@ -69,6 +70,14 @@ in
           enable = true;
           formatOnSave = true;
           inlayHints.enable = true;
+
+          trouble = {
+            enable = true;
+            setupOpts = {
+              auto_close = true;
+              modes.diagnostics.auto_open = true;
+            };
+          };
         };
 
         treesitter = {
