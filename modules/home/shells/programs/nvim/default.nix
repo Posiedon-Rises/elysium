@@ -22,6 +22,7 @@ in
     programs.neovim = {
       enable = true;
     };
+    
 
     programs.nvf = {
       enable = true;
@@ -148,9 +149,9 @@ in
             action = "<cmd>:Telescope file_browser<CR>";
           }
           {
-            key = "<leader>fts";
+            key = "<leader>fds";
             mode = "n";
-            action = "<cmd>:Telescope treesitter<CR>";
+            action = "<cmd>:Telescope lsp_document_symbols<CR>";
           }
           {
             key = "<leader>git";
