@@ -6,6 +6,7 @@
 
     development = {
       languages.nix.enable = true;
+      languages.lua.enable = true;
     };
 
     programs = {

@@ -99,6 +99,14 @@ in
               };
             };
           };
+
+          lua = lib.mkIf langCfg.lua.enable {
+            enable = true;
+
+            lsp.lazydev.enable = true;
+
+            format.enable = true;
+          };
         };
 
         # Other
