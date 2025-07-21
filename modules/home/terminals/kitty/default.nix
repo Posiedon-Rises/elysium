@@ -116,13 +116,6 @@ in
         "ctrl+enter" = "new_window";
         "ctrl+shift+w" = "close_window";
 
-        # Tab bindings
-        "ctrl+t" = "new_tab !neighbor";
-        "ctrl+tab" = "next_tab";
-        "ctrl+shift+tab" = "previous_tab";
-        "ctrl+," = "move_tab_forward";
-        "ctrl+alt+t" = "set_tab_title";
-
         # Miscellaneous
         "ctrl+shift+plus" = "change_font_size all +2.0";
         "ctrl+shift+minus" = "change_font_size all -2.0";
