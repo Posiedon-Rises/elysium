@@ -1,8 +1,13 @@
 {
   text = {
-    hex = "#cccccc";
-    alpha = "cccccc";
-    rgb = "rgb(204, 204, 204)";
+    hex = "#e0ebff";
+    alpha = "e0ebff";
+    rgb = "rgb(244, 235, 204)";
+  };
+  text-dark = {
+    hex = "#435790";
+    alpha = "435790"
+    rgb = "rgb(67, 87, 144)";
   };
   background = {
     hex = "#060916";
@@ -13,6 +18,11 @@
     hex = "#0c1225";
     alpha = "0c1225";
     rgb = "rgb(12, 18, 37)";
+  };
+  background-highlight = {
+    hex = "#121d48";
+    alpha = "121d48";
+    rgb = "rgb(18, 29, 72)";
   };
   hotRed = {
     hex = "#e3365e";
