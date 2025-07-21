@@ -92,5 +92,10 @@
       url = "github:TagStudioDev/TagStudio/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-search-telescope-nvim = {
+      url = "github:Cool-Game-Dev/nix-search-telescope.nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }

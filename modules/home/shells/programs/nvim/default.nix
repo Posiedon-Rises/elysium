@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
   ...
@@ -144,6 +145,12 @@ in
             {
               name = "file_browser";
               packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
+              setup = { };
+            }
+
+            {
+              name = "nix-search";
+              packages = [ inputs.nix-search-telescope-nvim.packages.${pkgs.system}.default ];
               setup = { };
             }
           ];
