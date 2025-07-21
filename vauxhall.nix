@@ -6,7 +6,7 @@
   };
   text-dark = {
     hex = "#435790";
-    alpha = "435790"
+    alpha = "435790";
     rgb = "rgb(67, 87, 144)";
   };
   background = {
