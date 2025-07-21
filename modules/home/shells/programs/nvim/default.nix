@@ -149,8 +149,8 @@ in
             }
 
             {
-              name = "nix-search";
-              packages = [ inputs.nix-search-telescope-nvim.packages.${pkgs.system}.default ];
+              name = "manix";
+              packages = [ pkgs.vimPlugins.telescope-manix ];
               setup = { };
             }
           ];
