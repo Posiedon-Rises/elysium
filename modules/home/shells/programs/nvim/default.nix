@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
   ...
@@ -122,6 +121,16 @@ in
 
         # Other
 
+        clipboard = {
+          enable = true;
+          registers = "unnamedplus";
+        };
+
+        terminal.toggleterm = {
+          enable = true;
+          setupOpts.direction = "float";
+        };
+
         telescope = {
           enable = true;
 
@@ -173,6 +182,11 @@ in
             key = "<leader>git";
             mode = "n";
             action = "<cmd>:Neogit<CR>";
+          }
+          {
+            key = "<c-T>";
+            mode = "t";
+            action = "<cmd>:ToggleTerm<CR>";
           }
         ];
       };
