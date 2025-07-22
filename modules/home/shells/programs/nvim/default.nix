@@ -55,6 +55,7 @@ in
         };
 
         options = {
+          expandtab = false;
           tabstop = 2;
           shiftwidth = 2;
         };
