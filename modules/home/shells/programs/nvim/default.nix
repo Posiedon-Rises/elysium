@@ -99,7 +99,10 @@ in
           };
         };
 
-        projects.project-nvim.enable = true;
+        projects.project-nvim = {
+          enable = true;
+          setupOpts.manual_mode = false;
+        };
 
         languages = {
           enableDAP = true;
