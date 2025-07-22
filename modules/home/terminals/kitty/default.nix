@@ -22,7 +22,7 @@ in
         # THEME
 
         # Fonts
-        font_family = "JetBrains Mono NF, emoji";
+        font_family = "JetBrains Mono NF Mono, emoji";
         bold_font = "auto";
         italic_font = "auto";
         bold_italic_font = "auto";
