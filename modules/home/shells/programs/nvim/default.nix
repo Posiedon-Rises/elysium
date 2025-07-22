@@ -58,6 +58,7 @@ in
           expandtab = false;
           tabstop = 2;
           shiftwidth = 2;
+          mouse = "";
         };
 
         # Programming
