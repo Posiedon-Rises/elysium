@@ -103,15 +103,15 @@ in
         projects.project-nvim.enable = true;
 
         languages = {
+          enableDAP = true;
+          enableFormat = true;
+          enableTreesitter = true;
+          enableExtraDiagnostics  = true; 
+
           nix = lib.mkIf langCfg.nix.enable {
             enable = true;
-            extraDiagnostics.enable = true;
-            extraDiagnostics.types = [
-              "deadnix"
-              "statix"
-            ];
 
-            treesitter.enable = true;
+            format.type = "nixfmt";
 
             lsp = {
               server = "nixd";
@@ -129,8 +129,6 @@ in
             enable = true;
 
             lsp.lazydev.enable = true;
-
-            format.enable = true;
           };
         };
 
