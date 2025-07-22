@@ -21,9 +21,8 @@ in
 
     programs.neovim = {
       enable = true;
-      
+
     };
-    
 
     programs.nvf = {
       enable = true;
@@ -45,7 +44,7 @@ in
             right = "";
           };
         };
-        
+
         utility.outline.aerial-nvim = {
           enable = true;
           mappings.toggle = "<leader>a";
@@ -65,7 +64,7 @@ in
         autocomplete.blink-cmp.enable = true;
 
         git.neogit.enable = true;
-        
+
         lsp = {
           enable = true;
           formatOnSave = true;
@@ -87,7 +86,7 @@ in
 
         mini.surround = {
           enable = true;
-          
+
           # Replaces surrond mappings with 'gs' varients
           setupOpts.mappings = {
             add = "gsa";
@@ -99,14 +98,14 @@ in
             update_n_lines = "gsn";
           };
         };
-        
+
         projects.project-nvim.enable = true;
 
         languages = {
           enableDAP = true;
           enableFormat = true;
           enableTreesitter = true;
-          enableExtraDiagnostics  = true; 
+          enableExtraDiagnostics = true;
 
           nix = lib.mkIf langCfg.nix.enable {
             enable = true;

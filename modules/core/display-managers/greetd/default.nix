@@ -17,7 +17,8 @@ in
         description = "Greeter to use for greetd.";
       }
     )
-  ] ++ lib.elysium.scanPaths ./.;
+  ]
+  ++ lib.elysium.scanPaths ./.;
 
   options.elysium.display-managers.display-managers.greetd.enable = lib.mkEnableOption "greetd";
 

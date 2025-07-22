@@ -3,5 +3,6 @@
 {
   imports = [
     inputs.nvf.homeManagerModules.default
-  ] ++ lib.elysium.scanPaths ./.;
+  ]
+  ++ lib.elysium.scanPaths ./.;
 }

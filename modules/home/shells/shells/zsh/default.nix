@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 
@@ -31,7 +30,6 @@ in
       syntaxHighlighting = {
         enable = true;
       };
-
 
       shellAliases = cfg'.shellAliases;
 

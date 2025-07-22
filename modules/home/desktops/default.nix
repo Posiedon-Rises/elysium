@@ -16,7 +16,8 @@ in
       example = "hyprland";
       description = "Default desktop to use.";
     })
-  ] ++ lib.elysium.scanPaths ./.;
+  ]
+  ++ lib.elysium.scanPaths ./.;
 
   options.elysium.desktops = {
     enable = lib.mkEnableOption "desktops" // {
