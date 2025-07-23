@@ -117,7 +117,7 @@ in
         "ctrl+shift+w" = "close_window";
 
         # Miscellaneous
-        "ctrl+shift+plus" = "change_font_size all +2.0";
+        "ctrl+plus" = "change_font_size all +2.0";
         "ctrl+shift+minus" = "change_font_size all -2.0";
         "ctrl+shift+backspace" = "change_font_size all 0";
         "ctrl+shift+alt+s" = "edit_config_file";
