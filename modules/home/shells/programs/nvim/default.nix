@@ -137,9 +137,16 @@ in
 
           markdown = {
             enable = true;
+            format.type = "prettierd";
             extensions.render-markdown-nvim.enable = true;
           };
         };
+
+				autocmds = [{
+					event = [ "FileType" ];
+					pattern = [  "markdown" ];
+					command = ":setl colorcolumn=80";
+				}];
 
         # Other
 
