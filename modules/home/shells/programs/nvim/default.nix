@@ -59,6 +59,7 @@ in
           tabstop = 2;
           shiftwidth = 2;
           mouse = "";
+          linebreak = true;
         };
 
         # Programming
@@ -146,12 +147,18 @@ in
           };
         };
 
-				autocmds = [{
-					event = [ "FileType" ];
-					pattern = [  "markdown" ];
-					command = ":setl colorcolumn=80";
-				}];
-
+        autocmds = [
+          {
+            event = [ "FileType" ];
+            pattern = [ "markdown" ];
+            callback = lib.mkLuaInline ''
+              	function()
+              		vim.opt_local.textwidth=80
+                	vim.opt_local.formatoptions:append("t")
+                end
+            '';
+          }
+        ];
         # Other
 
         clipboard = {
