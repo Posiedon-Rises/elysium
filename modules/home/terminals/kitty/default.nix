@@ -23,10 +23,11 @@ in
 
         # Fonts
         font_family = "JetBrains Mono NF Mono, emoji";
+
         bold_font = "auto";
         italic_font = "auto";
         bold_italic_font = "auto";
-        font_size = 9.0;
+        font_size = 11.0;
         disable_ligatures = "never";
 
         # Cursor
@@ -102,7 +103,6 @@ in
         "ctrl+shift+v" = "paste_from_clipboard";
 
         # Scroll bindings
-        "ctrl+w" = "close_tab";
         "ctrl+up" = "scroll_line_up";
         "ctrl+down" = "scroll_line_down";
         "ctrl+page_up" = "scroll_page_up";
@@ -122,6 +122,10 @@ in
         "ctrl+shift+backspace" = "change_font_size all 0";
         "ctrl+shift+alt+s" = "edit_config_file";
       };
+
+      # extraConfig = ''
+      #		symbol_map U+2320,U+2321,U+239B-U+23B3 Noto Sans Math
+      # '';
     };
   };
 }
