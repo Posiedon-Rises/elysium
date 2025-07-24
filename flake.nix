@@ -50,6 +50,13 @@
         |> (s: import nixpkgs { inherit system; })
         |> (pkgs: inputs.treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix)
       );
+
+      devShell = forAllSystems (
+        system:
+        import ./shell.nix {
+          pkgs = nixpkgs.legacyPackages.${system};
+        }
+      );
     };
 
   inputs = {
