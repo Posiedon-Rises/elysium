@@ -20,4 +20,4 @@ This could not be done without the amazing configurations here:
 - [EmergentMind/nix-config] - A couple small snippets are stolen from here, for
   doing complex things in elegent ways (check out nixosConfigurations in the
   [flake.nix]). Also a great reference for an advanced configuration without
-  custom modules
+  custom modules.
