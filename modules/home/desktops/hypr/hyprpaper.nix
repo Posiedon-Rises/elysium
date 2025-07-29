@@ -20,7 +20,7 @@ in
       enable = true;
       settings = {
         preload = [ "${lib.elysium.relativeToRoot "wallpapers/stars.jpg"}" ];
-        wallpaper = [ ",${lib.elysium.relativeToRoot "wallpapers/stars.jpg"}" ];
+        wallpaper = [ ",${lib.elysium.relativeToRoot "wallpapers/stars.jpg>"}" ];
       };
     };
   };

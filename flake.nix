@@ -99,5 +99,10 @@
       url = "github:TagStudioDev/TagStudio/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fenix = {
+      url = "fenix/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }

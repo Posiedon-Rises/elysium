@@ -17,7 +17,7 @@ in
     group = hostSpec.username;
     uid = 1000;
     extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   users.groups.${hostSpec.username} = {

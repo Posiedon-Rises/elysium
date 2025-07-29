@@ -11,7 +11,7 @@ in
   imports = [
     (lib.elysium.mkSelectorModule [ "elysium" "shells" ] {
       name = "default";
-      default = "zsh";
+      default = "fish";
       description = "Default shell to use.";
     })
   ]

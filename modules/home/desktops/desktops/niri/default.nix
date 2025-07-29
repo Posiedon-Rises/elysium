@@ -9,7 +9,7 @@
     elysium.desktops = {
       rofi.enable = true;
       swaync.enable = true;
-      waybar.enable = true;
+      quickshell.enable = true;
       activate-linux.enable = true;
       kando.enable = true;
     };

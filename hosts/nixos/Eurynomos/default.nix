@@ -1,11 +1,12 @@
-{ lib, ... }:
+{
+  lib,
+  ...
+}:
 
 {
   imports = lib.elysium.scanPaths ./.;
-
   hostSpec = {
-    hostName = "Hydra";
-    isDesktop = true;
+    hostName = "Eurynomos";
   };
 
   # Just don't change unless absolutly necessary

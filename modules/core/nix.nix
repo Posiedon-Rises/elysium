@@ -1,7 +1,15 @@
-{ ... }:
+{
+  config,
+  lib,
+  inputs,
+  ...
+}:
 
 {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    inputs.fenix.overlays.default
+  ];
   nix.settings = {
     experimental-features = [
       "nix-command"
@@ -36,9 +44,6 @@
 
   programs.nh = {
     enable = true;
-    flake = "/etc/nixos";
+    flake = "/home/${config.hostSpec.username}/.elysium";
   };
-
-  # Just don't change unless absolutly necessary
-  system.stateVersion = "24.11"; # Did you read the comment?
 }

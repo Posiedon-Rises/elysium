@@ -7,6 +7,7 @@
     development = {
       languages.nix.enable = true;
       languages.lua.enable = true;
+			languages.rust.enable = true;
     };
 
     programs = {

@@ -145,6 +145,13 @@ in
             format.type = "prettierd";
             extensions.render-markdown-nvim.enable = true;
           };
+
+          rust = lib.mkIf langCfg.rust.enable {
+            enable = true;
+            crates.enable = true;
+
+            format.package = langCfg.rust.toolchain.rustfmt;
+          };
         };
 
         autocmds = [

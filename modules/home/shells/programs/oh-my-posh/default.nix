@@ -66,7 +66,7 @@ in
         {
           newline = true;
           type = "prompt";
-          align = "left";
+          alignment = "left";
           segments = [
             {
               type = "text";
@@ -77,11 +77,20 @@ in
                 "{{ if eq .Code 0 }}lightCyan{{ end }}"
               ];
               background = "transparent";
-              template = "";
+              template = "❯ ";
             }
           ];
         }
       ];
+
+      transient_prompt = {
+        foreground_templates = [
+          "{{ if gt .Code 0 }}red{{ end }}"
+          "{{ if eq .Code 0 }}lightCyan{{ end }}"
+        ];
+        background = "transparent";
+        template = "❯ ";
+      };
     };
   };
 }

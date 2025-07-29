@@ -21,7 +21,7 @@ in
       hypr.enable = true;
       rofi.enable = true;
       swaync.enable = true;
-      waybar.enable = true;
+      quickshell.enable = true;
       activate-linux.enable = true;
       kando.enable = true;
     };
@@ -76,9 +76,9 @@ in
         # https://wiki.hyprland.org/Configuring/Variables/#general
         general = {
           gaps_in = "4";
-          gaps_out = "0, 8, 8, 8";
+          gaps_out = "8, 8, 8, 8";
 
-          border_size = 1;
+          border_size = 2;
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
           "col.active_border" = "rgb(${vauxhall.cyan.alpha})";
