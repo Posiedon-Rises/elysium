@@ -70,11 +70,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    activate-linux = {
-      url = "github:MrGlockenspiel/activate-linux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
