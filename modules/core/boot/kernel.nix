@@ -11,13 +11,14 @@ in
 {
 
   options.elysium.boot = {
-    kernal = lib.mkOption {
+    kernel = lib.mkOption {
       type = lib.types.raw;
-      default = pkgs.linuxPackages_zen;
+      default =
+        if config.hostSpec.isDesktop then pkgs.linuxPackages_zen else pkgs.linuxPackages.kernels.default;
     };
   };
 
   config.boot = {
-    kernelPackages = cfg.kernal;
+    kernelPackages = cfg.kernel;
   };
 }
