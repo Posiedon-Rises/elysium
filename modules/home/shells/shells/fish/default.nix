@@ -18,6 +18,9 @@ in
     programs.fish = {
       enable = true;
 
+      shellInit = builtins.readFile ./init.fish;
+      shellInitLast = builtins.readFile ./init-last.fish;
+
       shellAliases = cfg'.shellAliases;
     };
   };
