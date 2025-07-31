@@ -33,7 +33,7 @@ in
           {
             monitor = "";
             #path = screenshot
-            path = "${lib.elysium.relativeToRoot "wallpapers/stars.jpg"}";
+            path = "${lib.elysium.relativeToRoot "wallpapers/stars.png"}";
             #color = $background
             blur_size = 5;
             blur_passes = 2;

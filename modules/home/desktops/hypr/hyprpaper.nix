@@ -19,8 +19,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "${lib.elysium.relativeToRoot "wallpapers/stars.jpg"}" ];
-        wallpaper = [ ",${lib.elysium.relativeToRoot "wallpapers/stars.jpg>"}" ];
+        preload = [ "${lib.elysium.relativeToRoot "wallpapers/stars.png"}" ];
+        wallpaper = [ ",${lib.elysium.relativeToRoot "wallpapers/stars.png"}" ];
       };
     };
   };
