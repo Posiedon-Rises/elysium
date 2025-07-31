@@ -24,6 +24,7 @@ in
       quickshell.enable = true;
       activate-linux.enable = true;
       kando.enable = true;
+      playerctl.enable = true;
     };
     wayland.windowManager.hyprland = {
       enable = true;
